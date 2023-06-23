@@ -102,7 +102,9 @@ class MainActivity : AppCompatActivity() {
                 // Reiniciar el contador a 0
                 clickCount = 0
             }
+            recyclerView.scrollToPosition(0)
             getImagesFromPexels()
+
         }
 
 
@@ -274,8 +276,8 @@ class MainActivity : AppCompatActivity() {
                 }
             interstitialAd?.show(this)
         } else {
-            Toast.makeText(this, "Ad wasn't loaded.", Toast.LENGTH_SHORT).show()
-
+            Log.d(TAG, "Ad wasn't loaded.")
+            loadAd()
         }
     }
 
