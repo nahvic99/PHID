@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+
+    <LinearLayout
+        android:id="@+id/searchLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/my_primary"
+            android:backgroundTintMode="multiply"
+            android:elevation="6dp"
+            android:src="@drawable/ic_refresh"
+            app:iconGravity="textStart"
+            android:layout_marginStart="8dp"
+            app:iconPadding="8dp"
+            android:contentDescription="refresh"
+            android:textColor="@color/my_on_primary"
+            android:padding="8dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonSearch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="4dp"
+            android:layout_marginStart="8dp"
+            style="@style/Widget.MaterialComponents.Button.Icon"
+            app:icon="@drawable/ic_search"
+            android:text="Search"
+            android:contentDescription="search"
+            android:padding="8dp" />
+
+
+
+
+        <EditText
+            android:id="@+id/editTextQuery"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+
+            android:layout_margin="8dp"
+            android:autofillHints="search"
+            android:hint="Buscar"
+            android:inputType="text" />
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+       />
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        app:adSize="BANNER"
+        app:adUnitId="ca-app-pub-2768901988841601/6013951141"
+
+        />
+
+</LinearLayout>
+
+
+
+
+
